@@ -39,7 +39,7 @@
     </ion-item>
   </ion-list>
 
-  
+
   <ion-button (click)="startScanner()" expand="full" shape="round">
     Escanear código
   </ion-button>
@@ -70,16 +70,15 @@
       </ion-item-options>
 
     </ion-item-sliding>
-  </ion-list>
-
-  <ion-row class="scanner-buttons" [hidden]="!scanActive">
-    <ion-col class="ion-no-padding">
-      <ion-button (click)="stopScanner()" expand="block" shape="round">
-        Detener
-      </ion-button>
-    </ion-col>
-  </ion-row>
-
-  <div class="scan-box" [hidden]="!scanActive"></div>
-  
+  </ion-list>  
 </ion-content>
+
+<ion-row class="scanner-buttons" [hidden]="!scanActive">
+  <ion-col class="ion-no-padding">
+    <ion-button (click)="stopScanner()" expand="block" shape="round">
+      Detener
+    </ion-button>
+  </ion-col>
+</ion-row>
+
+<div class="scan-box" [hidden]="!scanActive"></div>
