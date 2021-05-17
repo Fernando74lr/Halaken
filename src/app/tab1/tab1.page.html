@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" [hidden]="scanActive">
   <ion-toolbar color="primary">
     <ion-title>
       Añadir nuevo artículo
@@ -6,7 +6,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" [hidden]="scanActive" [style.--background]="scanActive ? '#00000000' : '#ffffff'">
   <ion-list>
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>

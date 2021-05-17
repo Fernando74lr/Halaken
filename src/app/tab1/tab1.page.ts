@@ -38,6 +38,7 @@ export class Tab1Page implements AfterViewInit, OnDestroy {
   async startScanner() {
     const allowed = await this.checkPermission();
     if (allowed) {
+      this.showToast('Iniciando cámara');
       this.scanActive = true;
       const result = await BarcodeScanner.startScan();
       console.log("🚀 ~ file: home.page.ts ~ line 30 ~ HomePage ~ startScanner ~ result", result);

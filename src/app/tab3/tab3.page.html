@@ -14,13 +14,24 @@
 
     <ion-item-sliding *ngFor="let item of items">
       <ion-item>
-        <ion-label text-wrap>
+        <!-- <ion-label text-wrap>
           <h3>{{ item.name }}</h3>
           <ion-text color="secondary">
             <p>{{ item.description }}</p>
           </ion-text>
           <p>{{ item.modified | date:'short' }}</p>
+        </ion-label> -->
+        <ion-label text-wrap>
+          <h2>{{ item.name }}</h2>
+          <ion-text color="secondary">
+            <p>{{ item.description }}</p>
+          </ion-text>
+          <ion-text color="danger">
+            <p>ID: {{ item.barcode }}</p>
+          </ion-text>
+          <p>{{ item.modified | date:'medium' }}</p>
         </ion-label>
+        <ion-label slot="end" class="ion-text-right"><h3><b>Disponibles:</b> {{ item.quantity }} <br> <b>Precio:</b> ${{ item.price }} MXN</h3></ion-label>
       </ion-item>
 
       <ion-item-options side="end">
