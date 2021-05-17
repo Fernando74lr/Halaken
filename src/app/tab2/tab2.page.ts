@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class Tab2Page {
 
+  pruebas = [1,2,3,4,5];
+  prueba_bool = true;
   constructor() {}
 
 }
