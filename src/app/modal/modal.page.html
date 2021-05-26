@@ -1,0 +1,46 @@
+<ion-header translucent>
+  <ion-toolbar color="primary">
+    <ion-title>Editar artículo</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="closeModal()">Salir</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="itemEdit.name" #ctrl="ngModel" type="text" clearInput name="name">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Precio</ion-label>
+      <ion-input [(ngModel)]="itemEdit.price" type="number" clearInput name="price">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Cantidad en existencia</ion-label>
+      <ion-input [(ngModel)]="itemEdit.quantity" type="number" clearInput name="quantity">
+      </ion-input>
+    </ion-item>
+    
+    <ion-item>
+      <ion-label position="floating">Descripción</ion-label>
+      <ion-input [(ngModel)]="itemEdit.description" type="text" clearInput name="description">
+      </ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Código de barra</ion-label>
+      <ion-input [(ngModel)]="itemEdit.barcode" type="text" clearInput name="barcode">
+      </ion-input>
+    </ion-item>
+  </ion-list>
+
+  <ion-button expand="full" (click)="updateItem(itemEdit)" shape="round" type="submit" color="success">
+    Guardar artículo
+  </ion-button>
+</ion-content>

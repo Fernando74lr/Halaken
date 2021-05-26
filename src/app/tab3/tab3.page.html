@@ -11,7 +11,9 @@
     <ion-list-header>
       <ion-label>Artículos</ion-label>
     </ion-list-header>
-
+    <ion-button (click)="loadItems()" color="success" expand="block" shape="round">
+      Actualizar
+    </ion-button>
     <ion-item-sliding *ngFor="let item of items">
       <ion-item>
         <ion-label text-wrap>
@@ -27,15 +29,16 @@
         <ion-label slot="end" class="ion-text-right"><h3><b>Disponibles:</b> {{ item.quantity }} <br> <b>Precio:</b> ${{ item.price }} MXN</h3></ion-label>
       </ion-item>
 
+      <ion-item-options side="start">
+        <ion-item-option color="success" (click)="addOrRemoveOne(item, true)">Añadir 1</ion-item-option>
+        <ion-item-option color="secondary" (click)="addOrRemoveOne(item, false)">Quitar 1</ion-item-option>
+      </ion-item-options>
+
       <ion-item-options side="end">
-        <ion-item-option color="secondary" (click)="updateItem(item)">Editar</ion-item-option>
+        <ion-item-option color="warning" (click)="presentModal(item)">Editar</ion-item-option>
         <ion-item-option color="danger" (click)="deleteItem(item)">Borrar</ion-item-option>
       </ion-item-options>
     </ion-item-sliding>
-
-    <ion-button (click)="loadItems()" color="success" expand="full" shape="round">
-      Actualizar
-    </ion-button>
     
   </ion-list>
 </ion-content>
