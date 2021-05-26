@@ -49,7 +49,7 @@ export class Tab2Page implements AfterViewInit, OnDestroy {
         });
         if (this.result) {
           this.showToast('¡Encontrado!');
-        } else {
+        } else { // TODO: PODER ELIMINAR LA BÚSQUEDA PARA HACER OTRA (CREO QUE NO AFECTA, PERO POR SI LAS FLIES)
           this.showToast('No hay ningún artículo con ese código de barra.');
         }
         this.scanActive = false;
@@ -96,7 +96,7 @@ export class Tab2Page implements AfterViewInit, OnDestroy {
   loadItems() {
     this.storageService.getItems().then(items => {
       this.items = items.reverse();
-      this.showToast('Datos obtenidos, No. items: ' + this.items.length);
+      // this.showToast('Datos obtenidos, No. items: ' + this.items.length);
       console.log(this.items);
     });
   }
