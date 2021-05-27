@@ -1,0 +1,41 @@
+<ion-content fullscreen class="ion-padding" scroll-y="false" *ngIf="show">
+  <ion-slides>
+
+    <ion-slide>
+      <div class="slide">
+        <img id="logo" src="../assets/slides/halaken_logo.jpg" />
+        <h2>¡Bienvenido!</h2>
+        <p>
+          Somos un par de mexicanas soñadoras; creyentes del poder del amor, <b>la magia y la intención</b>; amantes de crear y compartir información y experiencias con corazones dispuestos a recordar la magia que ya es en cada uno de ellos.
+        </p>
+        <ion-button fill="clear" routerLink="home/tabs/tab1" (click)="doNotShow()">Omitir</ion-button>
+      </div>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="../assets/slides/objective.png" />
+      <h2>Objetivo</h2>
+      <p>Nuestro <b>motor</b> y para qué de cada día es llevar magia y amor a más hogares y más corazones.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="../assets/slides/search.png" />
+      <h2>Buscador</h2>
+      <p>Encuentra un artículo escaneando su código de barra.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="../assets/slides/add.png" />
+      <h2>Añade productos</h2>
+      <p>Agrega artículos con todas sus características y código de barra.</p>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="../assets/slides/inventory.png" />
+      <h2>Inventario</h2>
+      <p>Revisa la lista de todos tus artículos disponibles, edítalos o elimínalos.</p>
+      <ion-button fill="clear" routerLink="home/tabs/tab1" (click)="doNotShow()">Empezar <ion-icon slot="end" name="arrow-forward"></ion-icon></ion-button>
+    </ion-slide>
+
+  </ion-slides>
+</ion-content>

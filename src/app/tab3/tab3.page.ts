@@ -81,10 +81,10 @@ export class Tab3Page {
 
     if (increment) {
       item.quantity = item.quantity + 1;
-      message = 'Se añadió otro artículo para:' + item.name;
+      message = `Se añadió otro artículo para "${item.name}"`;
     } else {
       item.quantity = item.quantity - 1;
-      message = 'Se quitó un artículo para:' + item.name;
+      message = `Se quitó otro artículo para "${item.name}"`;
     }
 
     item.modified = Date.now();
